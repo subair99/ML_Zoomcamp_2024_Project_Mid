@@ -15,6 +15,10 @@ tqdm = "*"
 notebook = "==7.1.2"
 ipywidgets = "*"
 jupyter = "*"
+numpy = "*"
+matplotlib = "*"
+seaborn = "*"
+xgboost = "*"
 
 [requires]
 python_version = "3.10"
