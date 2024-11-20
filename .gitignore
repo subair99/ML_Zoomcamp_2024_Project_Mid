@@ -1,4 +1,5 @@
-.csv
+MIT-BIH_Arrhythmia_Database.csv
+MIT-BIH_VEB_SVEB_F_Q.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
