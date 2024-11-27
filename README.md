@@ -22,8 +22,8 @@ a free course about LLMs and RAG.
 ## Technologies
 
 - Python 3.10
-- Docker for containerization
-- Flask as the API interface (see [Flask](https://flask.palletsprojects.com/en/stable/) for more information on Flask)
+- Docker
+- Flask
 - XGBoost 
 - Scikit-Learn
 - Pandas
@@ -48,7 +48,7 @@ XGB Classifier - - - - - - - - - - - - 0.9955
 The diagram below is a sample of the dataset’s statistics.
 
 <p align="center">
-  <img src="Dataset_Statistics.jpg">
+  <img src="./images/Dataset_Statistics.jpg">
 </p>
 
 
@@ -74,7 +74,7 @@ XGB Classifier - - - - - - - - - - - - 0.9951
 The diagram below is the heatmap of the dataset.
 
 <p align="center">
-  <img src="Heatmap.png">
+  <img src="./images/Heatmap.png">
 </p>
 
 
@@ -90,7 +90,7 @@ XGB Classifier - - - - - - - - - - - - 0.9951
 The diagram below is the boxplot of a section of the dataset before and after outliers’ removal.
 
 <p align="center">
-  <img src="Outliers.jpg">
+  <img src="./images/Outliers.jpg">
 </p>
 
 
@@ -103,7 +103,7 @@ The models tuning which is essential to ensure a model performs at its best was 
 The diagram below show the feature importances of the three models.
 
 <p align="center">
-  <img src="Feature_Importance.jpg">
+  <img src="./images/Feature_Importance.jpg">
 </p>
 
 
@@ -148,7 +148,7 @@ part_score_xgb_4 = 0.9717
 In the final publication I will select the model to be used for the project with the criteria for selection, and the deployment.The diagram below show some of the plots of the three models.
 
 <p align="center">
-  <img src="Final_Models_Plots.jpg">
+  <img src="./images/Final_Models_Plots.jpg">
 </p>
 
 
@@ -163,23 +163,23 @@ time_xgb = 2.85
 The notebook code were then refactored to python scripts that include train.py, functions.py, predict-test.py, predict.py, docker file with pipfile and pipfile.lock created when the pipenv environment was initiated and the required programs were installed. The diagrams below show some of the results obtained when the scripts were used to run the project.
 
 <p align="center">
-  <img src="run_train.jpg">
+  <img src="./images/run_train.jpg">
 </p>
 
 <p align="center">
-  <img src="run_gunicorn.jpg">
+  <img src="./images/run_gunicorn.jpg">
 </p>
 
 <p align="center">
-  <img src="run_predict-test.jpg">
+  <img src="./images/run_predict-test.jpg">
 </p>
 
 <p align="center">
-  <img src="docker_build.jpg">
+  <img src="./images/docker_build.jpg">
 </p>
 
 <p align="center">
-  <img src="docker_image.jpg">
+  <img src="./images/docker_image.jpg">
 </p>
 
 
