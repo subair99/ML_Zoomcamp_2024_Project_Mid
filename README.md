@@ -1,7 +1,7 @@
 # ECG Arrhythmia Classification 
 
 <p align="center">
-  <img src="ECG_Arrhythmia_Diagram.jpg">
+  <img src="./images/ECG_Arrhythmia_Diagram.jpg">
 </p>
 
 
@@ -41,9 +41,9 @@ The 'type' column is the target, and it consists of the variables N which repres
 
 The next step was to conduct the first training to obtain the Receiver Operating Characteristic Area Under the Curve (ROC UAC) score of the selected models and the result is as listed below:
 
-Logistic Regression Algorithm - - - - -0.9567
-Random Forest Classifier - - - - - - - 0.9989
-XGB Classifier - - - - - - - - - - - - 0.9955
+Logistic Regression Algorithm - - - - -0.9567  
+Random Forest Classifier - - - - - - - 0.9989  
+XGB Classifier - - - - - - - - - - - - 0.9955  
 
 The diagram below is a sample of the dataset’s statistics.
 
@@ -67,9 +67,9 @@ So, the following columns '1_pre-RR', '1_post-RR', '0_qrs_morph0', '1_qrs_morph0
 
 A second training was conducted, and the ROC UAC score are listed below:
 
-Logistic Regression Algorithm - - - - -0.9521
-Random Forest Classifier - - - - - - - 0.9991
-XGB Classifier - - - - - - - - - - - - 0.9951
+Logistic Regression Algorithm - - - - -0.9521  
+Random Forest Classifier - - - - - - - 0.9991  
+XGB Classifier - - - - - - - - - - - - 0.9951  
 
 The diagram below is the heatmap of the dataset.
 
@@ -83,9 +83,9 @@ After the second training it was observed that the columns removed did not affec
 
 A third training was conducted, and the ROC UAC scores are listed below:
 
-Logistic Regression Algorithm - - - - -0.9521
-Random Forest Classifier - - - - - - - 0.9991
-XGB Classifier - - - - - - - - - - - - 0.9951
+Logistic Regression Algorithm - - - - -0.9521  
+Random Forest Classifier - - - - - - - 0.9991  
+XGB Classifier - - - - - - - - - - - - 0.9951  
 
 The diagram below is the boxplot of a section of the dataset before and after outliers’ removal.
 
@@ -111,39 +111,39 @@ The diagram below show the feature importances of the three models.
 
 The tuning of the models made the best hyperparameters available so the best models can be created and analysed by plotting their ROC curve, precision-recall curve and f1 curve. At this stage I went back to all the results with the aim of analysing the reasons for the value obtained. Before applying SMOTE on the data, the results obtained were:
 
-model_score_lra_1 = 0.955
-part_score_lra_1 = 0.6444
-model_score_rfc_1 = 0.9977
-part_score_rfc_1 = 0.9752
-model_score_xgb_1 = 0.993
-part_score_xgb_1 = 0.9047
+model_score_lra_1 = 0.955  
+part_score_lra_1 = 0.6444  
+model_score_rfc_1 = 0.9977  
+part_score_rfc_1 = 0.9752  
+model_score_xgb_1 = 0.993  
+part_score_xgb_1 = 0.9047  
 
 Note that the model_score_lra is from the Logistic Regression Algorithm, rfc is from the Random Forest Classifier and xgb is from the XGB Classifier. The part_score is the result obtained when the arrhythmia data is predicted with the current model as explained in the last publication. After applying SMOTE on the data, the results obtained were:
 
-model_score_lra_2 = 0.9567
-part_score_lra_2 = 0.7174
-model_score_rfc_2 = 0.9989
-part_score_rfc_2 = 0.9892
-model_score_xgb_2 = 0.9955
-part_score_xgb_2 = 0.9746
+model_score_lra_2 = 0.9567  
+part_score_lra_2 = 0.7174  
+model_score_rfc_2 = 0.9989  
+part_score_rfc_2 = 0.9892  
+model_score_xgb_2 = 0.9955  
+part_score_xgb_2 = 0.9746  
 
 Clearly, the application of SMOTE had a positive effect on the prediction of the arrhythmia data as the score increased for all the models, so its good practice to apply it whenever the data is imbalanced. The results obtained after collinearity check and outliers’ removal are:
 
-model_score_lra_3 = 0.9507
-part_score_lra_3 = 0.6737
-model_score_rfc_3 = 0.9993
-part_score_rfc_3 = 0.9901
-model_score_xgb_3 = 0.9948
-part_score_xgb_3 = 0.8985
+model_score_lra_3 = 0.9507  
+part_score_lra_3 = 0.6737  
+model_score_rfc_3 = 0.9993  
+part_score_rfc_3 = 0.9901  
+model_score_xgb_3 = 0.9948  
+part_score_xgb_3 = 0.8985  
 
 In this case the results are lower, this not a problem because the most important job of a model in machine learning is to perform to its best on unseen data which will not be possible if almost perfect colinear columns and outliers are present. The results obtained for the final models are:
 
-model_score_lra_4 = 0.9508
-part_score_lra_4 = 0.6737
-model_score_rfc_4 = 0.9974
-part_score_rfc_4 = 0.9733
-model_score_xgb_4 = 0.9964
-part_score_xgb_4 = 0.9717
+model_score_lra_4 = 0.9508  
+part_score_lra_4 = 0.6737  
+model_score_rfc_4 = 0.9974  
+part_score_rfc_4 = 0.9733  
+model_score_xgb_4 = 0.9964  
+part_score_xgb_4 = 0.9717  
 
 In the final publication I will select the model to be used for the project with the criteria for selection, and the deployment.The diagram below show some of the plots of the three models.
 
